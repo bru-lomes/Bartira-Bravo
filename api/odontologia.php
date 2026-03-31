@@ -1,5 +1,5 @@
 
-<?php require __DIR__ . '/inc/header.php'; ?>
+<?php require __DIR__ . '/../inc/header.php'; ?>
 
 
 <link rel="stylesheet" href="CSS/odontologia.css">
@@ -95,7 +95,7 @@
   <script src="js/acessibilidade.js" defer></script>
 
 
-<?php require __DIR__ . '/inc/footer.php'; ?>
+<?php require __DIR__ . '/../inc/footer.php'; ?>
 <html lang="pt-BR"> 
 <head>
     <meta charset="UTF-8">

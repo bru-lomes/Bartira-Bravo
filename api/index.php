@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/inc/header.php'; ?>
+<?php require __DIR__ . '/../inc/header.php'; ?>
 
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/acessibilidade.css">
@@ -136,4 +136,4 @@
 
   <script src="js/acessibilidade.js" defer></script>
 
-<?php require __DIR__ . '/inc/footer.php'; ?>
+<?php require __DIR__ . '/../inc/footer.php'; ?>
