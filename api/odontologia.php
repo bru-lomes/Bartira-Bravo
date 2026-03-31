@@ -70,13 +70,16 @@
 </section>
 
 
-<!-- Barra Flutuante de Acessibilidade -->
-  <div id="acessibilidade-barra" aria-label="Barra de acessibilidade">
-    <button onclick="toggleContraste()" title="Ativar alto contraste">🌓 Contraste</button>
-    <button onclick="alterarFonte('+')" title="Aumentar fonte">🔠+</button>
-    <button onclick="alterarFonte('-')" title="Reduzir fonte">🔠-</button>
-    <button onclick="lerPagina()" title="Ler conteúdo em voz alta">🔊 Leitura</button>
-    <button onclick="document.getElementById('in').scrollIntoView()" title="Ir para conteúdo">📄 Ir ao conteúdo</button>
+  <!-- Botão de Acessibilidade -->
+  <button id="btn-acessibilidade" aria-label="Abrir menu de acessibilidade">
+    <img src="IMG/logo_acessibilidade.png" alt="Acessibilidade">
+  </button>
+
+  <div id="acessibilidade-menu" class="hidden">
+      <button onclick="toggleContraste()"><span class="icon">🌓</span> Contraste</button>
+      <button onclick="alterarFonte('+')"><span class="icon">🔠+</span> Aumentar Fonte</button>
+      <button onclick="alterarFonte('-')"><span class="icon">🔠-</span> Reduzir Fonte</button>
+      <button onclick="lerPagina()"><span class="icon">🔊</span> Ler Página</button>
   </div>
 
   <!-- VLibras -->

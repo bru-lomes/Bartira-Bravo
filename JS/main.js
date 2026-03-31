@@ -5,37 +5,18 @@ const toggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
 const menu = document.getElementById('menu-principal');
 
-if (toggle && nav && menu) {
-  function openMenu() {
-    nav.classList.add('open');
-    toggle.setAttribute('aria-expanded', 'true');
-    toggle.setAttribute('aria-label', 'Fechar menu');
-  }
-  function closeMenu() {
-    nav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Abrir menu');
-  }
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
 
-  toggle.addEventListener('click', () => {
-    nav.classList.contains('open') ? closeMenu() : openMenu();
-  });
-
-  // Fecha com Esc
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && nav.classList.contains('open')) {
-      closeMenu();
-      toggle.focus();
-    }
-  });
-
-  // Fecha ao clicar fora (toque)
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-      closeMenu();
-    }
+if (toggle && nav) {
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita fechar imediatamente
+    nav.classList.toggle('open');
+    const expanded = nav.classList.contains('open');
+    toggle.setAttribute('aria-expanded', expanded);
   });
 }
+
 
 // ===== “Copiar link” (cards do acervo) =====
 document.addEventListener('click', (e) => {

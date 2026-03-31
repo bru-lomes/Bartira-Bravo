@@ -1,3 +1,8 @@
+document.getElementById('btn-acessibilidade').addEventListener('click', function() {
+    const menu = document.getElementById('acessibilidade-menu');
+    menu.classList.toggle('hidden');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Acessibilidade: navegação com teclado nos cartões
   const cards = document.querySelectorAll('.card-produto');
@@ -73,3 +78,4 @@ function pararLeitura() {
   const sintetizador = window.speechSynthesis;
   if (sintetizador.speaking) sintetizador.cancel();
 }
+

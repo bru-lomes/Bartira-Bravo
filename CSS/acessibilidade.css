@@ -11,50 +11,60 @@ body.modo-contraste button {
   border: 1px solid #fff !important;
 }
 
-/* Barra lateral */
-#acessibilidade-barra {
-  position: fixed;
-  top: 100px;
-  left: 12px;
-  z-index: 9999;
-  background: #801919;
-  border-radius: 12px;
-  padding: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: auto;
-  max-width: 160px;
+/* Botão flutuante redondo */
+#btn-acessibilidade {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 10000;
+    background: #801919;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 8px;
 }
 
-#acessibilidade-barra button {
-  background-color: #ffffff;
-  color: #801919;
-  font-weight: bold;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-align: left;
-  width: 140px;
-  transition: background 0.3s ease, transform 0.2s ease;
-  white-space: nowrap;
+#btn-acessibilidade img {
+    width: 100%;
+    height: auto;
 }
 
-#acessibilidade-barra button:hover {
-  background-color: #d4b7af;
+/* Menu suspenso */
+#acessibilidade-menu {
+    position: fixed;
+    top: 160px;
+    left: 20px;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #801919;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
-#acessibilidade-barra button:focus {
-  outline: 3px solid #ffffff;
-  outline-offset: 3px;
+#acessibilidade-menu.hidden {
+    display: none; /* Esconde o menu */
 }
+
+#acessibilidade-menu button {
+    background: none;
+    border: none;
+    color: #801919;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#acessibilidade-menu button:last-child { border: none; }
 
 /* Efeito tátil ao pressionar */
 button.pressionado,
