@@ -6,11 +6,11 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <a class="pill-cta" href="contato.php#contato">AGENDE SEU HORÁRIO</a>
+      <a class="pill-cta" href="contato#contato">AGENDE SEU HORÁRIO</a>
       <h1>Descubra o poder<br>da ginástica facial</h1>
       <p>Realce sua beleza natural com técnicas simples, eficazes e 100% naturais.</p>
       <a class="btn" href="#beneficios">Benefícios</a>
-      <a class="btn btn-outline" href="bartirabravo.php">Conheça a Bartira</a>
+      <a class="btn btn-outline" href="bartirabravo#sobre">Conheça a Bartira</a>
     </div>
     <figure class="hero-media">
       <img src="IMG/musculo_facial.jpeg" alt="Ginástica facial — imagem destaque" loading="eager">
@@ -100,7 +100,7 @@
       <li>Atendimentos semanais, quinzenais ou mensais</li>
       <li>Entrega de materiais e orientações para prática em casa</li>
     </ul>
-    <a class="btn" href="contato.php#contato">Quero saber mais</a>
+    <a class="btn" href="contato#contato">Quero saber mais</a>
   </div>
 </section>
 

@@ -152,7 +152,7 @@
     <li><strong>Exercitar:</strong> prática guiada, com correções e ajustes finos.</li>
     <li><strong>Consolidar:</strong> rotina simples para manter a evolução no dia a dia.</li>
   </ol>
-  <a class="btn" href="contato.php#contato">Quero começar</a>
+  <a class="btn" href="contato#contato">Quero começar</a>
 </section>
 
 <hr class="divider">
@@ -169,7 +169,7 @@
       <li>Atendimentos semanais, quinzenais ou mensais</li>
       <li>Materiais e orientações para prática em casa</li>
     </ul>
-    <a class="btn" href="contato.php#contato">Solicitar valores</a>
+    <a class="btn" href="contato#contato">Solicitar valores</a>
   </div>
 </section>
 

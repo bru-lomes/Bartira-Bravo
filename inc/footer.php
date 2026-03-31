@@ -39,6 +39,6 @@
   </div>
 </footer>
 
-<script src="JS/main.js"></script>
+<script src="/JS/main.js"></script>
 </body>
 </html>

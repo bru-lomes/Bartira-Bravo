@@ -8,7 +8,8 @@
   <title>Bartira Bravo — Ginástica Facial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Ginástica facial: técnicas naturais para saúde e aparência do rosto e pescoço.">
-  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/acessibilidade.css">
 </head>
 <body>
 <header class="site-header">
@@ -24,14 +25,12 @@
 
     <nav class="nav" aria-label="Menu principal">
       <ul>
-    
-        <li><a href="bartirabravo.php">Bartira Bravo</a></li>
-        <li><a href="ginastica_facial.php">Ginástica Facial</a></li>
-        <li><a href="odontologia.php">Odontologia</a></li>
-        <li><a href="acervo.php">Acervo</a></li>
-        <li><a href="contato.php#contato">Contato</a></li>
-        <li><a href="contato.php#endereco">Endereço</a></li>
-        
+        <li><a href="bartirabravo">Bartira Bravo</a></li>
+        <li><a href="ginastica_facial">Ginástica Facial</a></li>
+        <li><a href="odontologia">Odontologia</a></li>
+        <li><a href="acervo">Acervo</a></li>
+        <li><a href="contato#contato">Contato</a></li>
+        <li><a href="contato#endereco">Endereço</a></li>
       </ul>
     </nav>
   </div>
