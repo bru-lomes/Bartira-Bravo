@@ -1,279 +1,182 @@
-:root{
-  --bg:#ffffff;
-  --ink:#1b1b1b;
-  --muted:#393533;
-  --brand:#801919;       /* tom elegante */
-  --brand-2:#781616;    /* tom mais escuro do brand */
-  --line:#eaeaea;
-  --card:#f8f9fb;
-  --pill:#111827;
-  --radius:16px;
-  --shadow:0 8px 24px rgba(0,0,0,.08);
+:root {
+  --bg: #ffffff;
+  --ink: #1b1b1b;
+  --muted: #393533;
+  --brand: #801919;       /* tom elegante */
+  --brand-2: #781616;    /* tom mais escuro do brand */
+  --line: #eaeaea;
+  --card: #f8f9fb;
+  --pill: #111827;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0,0,0,.08);
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Inter,Arial,sans-serif;
-  color:var(--ink);
-  background:var(--bg);
-  line-height:1.5;
+/* --- Reset e Base --- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Inter, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
 }
 
-.wrap{width:min(1120px, 92%); margin:0 auto}
-.wrap.narrow{width:min(840px, 92%)}
+.wrap { width: min(1120px, 92%); margin: 0 auto; }
+.wrap.narrow { width: min(840px, 92%); }
 
-a{color:var(--brand); text-decoration:none}
-a:hover{color:var(--brand-2)}
+a { color: var(--brand); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--brand-2); }
 
-.site-header{position:sticky; top:0; z-index:30; background-color: #d4b7af; color:#fff; border-bottom:1px solid var(--line)}
-.site-header .wrap{display:flex; align-items:center; justify-content:space-between; padding:2px 0}
-.brand{display:flex; align-items:center; gap:10px}
-
-.logo{
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease;
-    object-fit:contain
+/* --- Header --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d4b7af;
+  color: #fff;
+  border-bottom: 1px solid var(--line);
 }
 
-.logo:hover {
-    transform: scale(1.2);
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  position: relative;
 }
 
+.brand { display: flex; align-items: center; gap: 10px; }
 
-.nav ul{display:flex; gap:28px; list-style:none; margin:0; padding:0}
-.nav a{color:#fbf6f6; font-weight:600}
-.nav a:hover{opacity:.8;
-transform: scale(1.05);
-color: #801919;}
-
-.nav-toggle{display:none; background:none; border:0; cursor:pointer}
-.nav-toggle .bar{display:block; width:24px; height:2px; background:#111; margin:5px 0}
-
-.site-main{display:block}
-
-.hero{padding:40px 0 24px; background:linear-gradient(180deg,#f7fbfb 0%,#ffffff 100%)}
-.hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:center}
-.pill-cta{
-  display:inline-block; background:var(--pill); color:#fff; font-weight:700;
-  padding:8px 14px; border-radius:999px; letter-spacing:.3px; margin-bottom:14px
-}
-.hero h1{font-size:clamp(28px, 5vw, 48px); line-height:1.1; margin:.1em 0 .3em}
-.hero p{color:var(--muted); max-width:52ch}
-.hero .btn{margin-right:12px}
-.hero-media img{width:100%; border-radius:var(--radius); box-shadow:var(--shadow); object-fit:cover}
-
-.about{padding:28px 0}
-.about p{color:#2b2b2b; font-size:1.05rem}
-
-.beneficios{padding:12px 0 10px}
-.beneficios h2{margin:0 0 12px}
-.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-.card{
-  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-  padding:18px; box-shadow:var(--shadow)
-}
-.card h3{margin-top:0}
-
-.pacotes{padding:10px 0 36px}
-.checks{list-style: "✓  "; padding-left:1.1em}
-.checks li{margin:.3em 0}
-
-.page-hero{padding:28px 0 14px; border-bottom:1px solid var(--line)}
-.page-hero h1{margin:.2em 0 .1em}
-
-.media-cards{display:grid; grid-template-columns:1fr; gap:16px; padding:22px 0}
-.media-card{
-  display:grid; grid-template-columns:180px 1fr; gap:16px;
-  background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:14px
-}
-.media-card .thumb img{width:100%; height:120px; object-fit:cover; border-radius:10px; background:#ddd}
-.media-card .desc{color:var(--muted); margin:.4em 0 1em}
-.actions{display:flex; gap:10px; flex-wrap:wrap}
-
-.contato-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; padding:24px 0}
-.form{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
-.form h2{margin-top:0}
-label{display:grid; gap:8px; margin:10px 0}
-input, textarea{
-  border:1px solid var(--line); border-radius:10px; padding:12px; font:inherit; background:#fff
-}
-.form-note{color:var(--muted); font-size:.95rem}
-
-.info{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px}
-
-.mapa{padding:12px 0 32px}
-.mapa-box{border:1px dashed var(--brand-2); border-radius:12px; padding:0; overflow:hidden; background:#f4fffe}
-.mapa-placeholder{display:grid; place-items:center; color:var(--brand-2); font-weight:700}
-
-.mapa-placeholder img{
-  width:100%;
-  height:auto;
-  object-fit:cover;
-}
-
-.mapa-placeholder img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-.cards .card img{width:100%; height:150px; object-fit:cover; border-radius:10px; margin-bottom:12px}
-
-.site-footer{border-top:1px solid var(--line); margin-top:30px; padding:18px 0 8px; background:#393533; color:#f3f1f0}
-.footer-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-.footer-bottom{border-top:1px solid var(--line); margin-top:12px; padding-top:12px; text-align:center}
-.social{list-style:none; padding:0; margin:8px 0 0; display:flex; gap:14px}
-
-.btn{
-  appearance:none; border:0; border-radius:999px; background:var(--brand); color:#fff;
-  font-weight:700; padding:10px 16px; cursor:pointer; display:inline-block; text-align:center
-}
-.btn:hover{background:var(--brand-2)}
-.btn-outline{
-  background:transparent; color:#d4b7af; border:2px solid #d4b7af; transition:background-color 0.3s ease, color 0.3s ease
-}
-.btn-outline:hover{color:#fff; background:var(--brand)}
-
-@media (max-width: 900px){
-  .hero-grid{grid-template-columns:1fr; padding-top:6px}
-  .cards{grid-template-columns:1fr}
-  .contato-grid{grid-template-columns:1fr}
-  .media-card{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .nav-toggle{display:block}
-  .nav{position:absolute; inset:64px 0 auto 0; background:#fff; border-bottom:1px solid var(--line); display:none}
-  .nav.open{display:block}
-  .nav ul{flex-direction:column; gap:0}
-  .nav li{border-top:1px solid var(--line)}
-  .nav a{display:block; padding:14px 4%}
-}
-
-/* Divider component */
-.divider{
-  width:80%;
-  height:4px;
-  margin:24px auto;
-  border-radius:999px;
-  color: #801919;
-  background-color: #801919;
-}
-
-.img_beneficios{
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  margin-bottom: 12px;
-}
-.titulo{
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 16px;      /* corrigido (antes: q6px) */
-  color: #801919;
-}
-
-.foto_bartira{
-  width: 100%;
-  max-width: 300px;
+.logo {
+  width: 100px;
   height: auto;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+.logo:hover { transform: scale(1.1); }
+
+/* --- Navegação Desktop --- */
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav a { color: #fbf6f6; font-weight: 600; font-size: 0.95rem; }
+.nav a:hover { 
+  transform: scale(1.05);
+  color: #801919;
 }
 
-/* === Alinhamento lateral (imagem + texto) — seção Bartira === */
-.bartira-linha{
-  display:flex;
-  align-items:flex-start;
-  gap:32px;
-  margin-top:20px;
-  flex-wrap:wrap; /* garante boa quebra sem alterar o layout geral */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 10px;
 }
-.bartira-foto{
-  flex:0 0 300px;          /* 300px fixos para a imagem, usando sua .foto_bartira */
-}
-.bartira-conteudo{
-  flex:1;                  /* texto ocupa o restante */
-}
-
-/* Empilha no mobile, sem mudar estilos existentes */
-@media (max-width: 900px){
-  .bartira-linha{flex-direction:column; text-align:left;}
-  .bartira-foto{flex:none; max-width:100%;}
+.nav-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #801919;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
-/* ===== Benefícios: título no topo; imagem à esquerda e texto à direita ===== */
-.beneficios .card{
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  gap:10px;
+/* --- Hero Section --- */
+.hero { padding: 40px 0 24px; background: linear-gradient(180deg,#f7fbfb 0%,#ffffff 100%); }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; }
+.pill-cta {
+  display: inline-block; background: var(--pill); color: #fff; font-weight: 700;
+  padding: 8px 14px; border-radius: 999px; letter-spacing: .3px; margin-bottom: 14px;
 }
+.hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: .1em 0 .3em; }
+.hero p { color: var(--muted); max-width: 52ch; }
+.hero .btn { margin-right: 12px; }
+.hero-media img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; }
 
-.beneficios .card h3{
-  font-size:1.25rem;
-  font-weight:700;
-  margin:0 0 6px;
-  color:var(--ink);
+/* --- Seções de Conteúdo --- */
+.about { padding: 28px 0; }
+.about p { color: #2b2b2b; font-size: 1.05rem; }
+
+.beneficios { padding: 28px 0; }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; box-shadow: var(--shadow);
 }
+.card h3 { margin-top: 0; }
 
-.beneficios .card-flex{
-  display:flex;
-  align-items:flex-start;
-  gap:14px;
+/* --- Benefícios Card Flex --- */
+.beneficios .card { display: flex; flex-direction: column; gap: 10px; }
+.beneficios .card-flex { display: flex; align-items: flex-start; gap: 14px; }
+.beneficios .card-icon img { width: 60px; height: 60px; object-fit: contain; flex-shrink: 0; }
+.beneficios .card-desc { margin: 0; line-height: 1.5; color: var(--ink); font-size: 1rem; }
+
+/* --- Bartira Bio Linha --- */
+.bartira-linha { display: flex; align-items: flex-start; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+.bartira-foto { flex: 0 0 300px; }
+.foto_bartira { width: 100%; max-width: 300px; height: auto; border-radius: 16px; box-shadow: var(--shadow); }
+.bartira-conteudo { flex: 1; }
+
+/* --- Footer --- */
+.site-footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 40px 0 20px; background: #393533; color: #f3f1f0; }
+.footer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 30px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 20px; text-align: center; }
+.social { list-style: none; padding: 0; margin: 15px 0 0; display: flex; gap: 14px; }
+.email { color: #fbf6f6; text-decoration: underline; }
+.email:hover { color: #d4b7af; }
+
+/* --- Componentes --- */
+.btn {
+  appearance: none; border: 0; border-radius: 999px; background: var(--brand); color: #fff;
+  font-weight: 700; padding: 12px 24px; cursor: pointer; display: inline-block; text-align: center;
 }
+.btn:hover { background: var(--brand-2); transform: translateY(-2px); }
+.btn-outline { background: transparent; color: #801919; border: 2px solid #801919; }
+.btn-outline:hover { color: #fff; background: var(--brand); }
 
-.beneficios .card-icon img{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-  flex-shrink:0;
-}
+.divider { width: 80%; height: 2px; margin: 40px auto; background-color: var(--brand); border: 0; }
+.titulo { text-align: center; font-size: 2.2rem; margin-bottom: 24px; color: var(--brand); }
+.logo_final { display: block; margin: 40px auto; max-width: 300px; width: 100%; }
 
-.beneficios .card-desc{
-  margin:0;
-  line-height:1.5;
-  color:var(--ink);
-  font-size:1rem;
-}
-
+/* --- RESPONSIVIDADE (Mobile Ajustado) --- */
 @media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .cards { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .social { justify-content: center; }
+
+  /* Ajuste Menu Hambúrguer */
+  .nav-toggle { display: block; }
+  
   .nav {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: absolute;
-    top: 100%; /* Aparece logo abaixo do header */
+    top: 100%; 
     left: 0;
     width: 100%;
-    background: #d4b7af; /* Cor do seu header */
+    background: #d4b7af;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .nav.open { display: block !important; }
+
+  .nav ul {
     flex-direction: column;
-    z-index: 1000;
+    align-items: center;
+    gap: 0;
   }
 
-  .nav.open {
-    display: flex !important; /* Mostra quando a classe .open é adicionada */
+  .nav li { width: 100%; text-align: center; }
+
+  .nav a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 1.1rem;
   }
 
-  .nav-toggle {
-    display: block; /* Garante que o botão de 3 barras apareça */
-    z-index: 1001;
-  }
-}
-
-.email{
-  color: #fbf6f6;
-  text-decoration: underline;
-}
-.email:hover{
-  color: #c12823;
-  text-decoration: none;
-}
-
-
-/* LOGO FINAL */
-.logo_final {
-  display: block;
-  margin: 0 auto;
-  max-width: 350px;
-  width: 100%;
-  height: auto;
+  .bartira-linha { flex-direction: column; align-items: center; text-align: center; }
+  .bartira-foto { flex: none; margin-bottom: 20px; }
 }

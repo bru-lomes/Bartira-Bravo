@@ -11,7 +11,7 @@ body.modo-contraste button {
   border: 1px solid #fff !important;
 }
 
-/* Botão flutuante redondo */
+/* Botão flutuante */
 #btn-acessibilidade {
     position: fixed;
     top: 100px;
@@ -19,7 +19,6 @@ body.modo-contraste button {
     z-index: 10000;
     background: #801919;
     border: 2px solid #fff;
-    border-radius: 50%;
     width: 50px;
     height: 50px;
     cursor: pointer;
