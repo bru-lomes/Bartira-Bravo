@@ -15,7 +15,7 @@
 <header class="site-header">
   
   <div class="wrap">
-    <a class="brand" href="index.php">
+    <a class="brand" href="index">
       <img src="IMG/logo_texto.png" alt="Bartira Bravo" class="logo">
     </a>
 

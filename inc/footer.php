@@ -30,7 +30,7 @@
       <p>Rua Senhor do Monte, 495, São Paulo, SP, Brazil</p>
       <p>Tel: (11) 2975-2473</p>
       <p>E-mail: <a class="email" href="mailto:ola@grandesite.com.br">bartirabravo@ginasticafacial.com.br</a></p>
-      <a class="btn btn-outline" href="contato.php#contato">Entre em contato conosco</a>
+      <a class="btn btn-outline" href="contato#contato">Entre em contato conosco</a>
     </section>
   </div>
 
