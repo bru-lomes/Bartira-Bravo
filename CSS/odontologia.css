@@ -1,0 +1,124 @@
+/* CSS/odontologia.css */
+
+/* topo e introdução */
+.sub {
+  color: var(--muted);
+  margin: 4px 0 0;
+  text-align: center;
+}
+
+.intro-odonto {
+  text-align: center;
+  color: var(--ink);
+  font-size: 1.02rem;
+  padding: 14px 0 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.intro-odonto em {
+  color: #801919;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* bloco principal */
+.destaque-djalma {
+  text-align: center;
+  padding: 10px 0 12px;
+}
+.destaque-djalma .nome {
+  color: #801919;
+  margin: 0.3em 0 0.5em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.destaque-djalma .bio {
+  color: #333;
+  max-width: 70ch;
+  margin: 0 auto 10px;
+  line-height: 1.55;
+  text-align: justify;
+}
+
+/* contatos */
+.contatos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contatos li {
+  color: #444;
+}
+.contatos a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.contatos a:hover {
+  color: var(--brand-2);
+  text-decoration: underline;
+}
+
+/* cards dos profissionais */
+.cards-profissionais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0 18px;
+}
+.card-prof {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-prof:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.card-prof .nome {
+  color: #801919;
+  margin: 0.3em 0 0.3em;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.card-prof .area {
+  color: #801919;
+  font-weight: 700;
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+}
+
+/* logo final */
+.logo_final {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* responsivo */
+@media (max-width: 900px) {
+  .cards-profissionais {
+    grid-template-columns: 1fr;
+  }
+  .contatos {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+@media (max-width: 500px) {
+  .card-prof {
+    padding: 12px;
+  }
+}
+

@@ -1,0 +1,80 @@
+/* BASE */
+.sub { color: var(--muted); margin: 4px 0 0; text-align: center; }
+.gf-h2 { color: #801919; margin: .1em 0 .4em; }
+
+/* ESTRUTURA GERAL */
+.gf-sec { padding: 18px 0; }
+
+.gf-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  align-items: stretch; /* mantém alturas proporcionais */
+}
+
+.gf-grid.rev { grid-template-columns: 0.85fr 1.15fr; }
+.gf-grid.single { grid-template-columns: 1.15fr 0.85fr; }
+
+.gf-col p { margin: .6em 0; }
+
+/* ALINHAMENTO JUSTIFICADO */
+.tex-jus { text-align: justify; }
+
+/* IMAGEM / CARD LATERAL */
+.gf-ilustra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 400px;
+  background-color:#ffffff;
+}
+
+.gf-ilustra img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain; /* exibe tudo sem cortar */
+  display: block;
+  
+}
+
+.gf-ilustra img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  
+}
+
+/* Para manter alinhamento horizontal */
+.gf-spacer {
+  min-height: 1px;
+}
+
+/* INTRODUÇÃO */
+.intro { padding: 12px 0 4px; }
+.intro p { margin: .6em 0; }
+
+/* LOGO FINAL */
+.logo_final {
+  display: block;
+  margin: 0 auto;
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .gf-grid,
+  .gf-grid.rev,
+  .gf-grid.single {
+    grid-template-columns: 1fr;
+  }
+  .gf-ilustra {
+    max-height: none;
+  }
+}
