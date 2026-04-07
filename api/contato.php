@@ -10,27 +10,34 @@
   </div>
 </section>
 
+
 <section class="contato-grid wrap" id="contato">
-  <form class="form" method="post" action="#">
-    <h2>Entre em contato conosco</h2>
+  <form class="form" action="https://formspree.io/f/xdapbeyy" method="POST">
+    <h2>Entre em contato conosco:</h2>
+    
     <label>
       Nome
-      <input type="text" name="nome" required placeholder="Seu nome completo">
+      <input type="text" name="name" required placeholder="Seu nome completo">
     </label>
+    
     <label>
       E-mail
       <input type="email" name="email" required placeholder="voce@exemplo.com">
     </label>
+    
     <label>
       Telefone
-      <input type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx">
+      <input type="tel" name="phone" placeholder="(xx) xxxxx-xxxx">
     </label>
+    
     <label>
       Mensagem
-      <textarea name="mensagem" rows="5" placeholder="Conte como posso ajudar"></textarea>
+      <textarea name="message" rows="5" required placeholder="Conte como posso ajudar"></textarea>
     </label>
+
+    <input type="hidden" name="_next" value="https://bartirabravo.vercel.app/contato">
+    
     <button class="btn" type="submit">Enviar</button>
-    <p class="form-note">Ou escreva para <a href="mailto:bartirabravo@ginasticafacial.com.br">bartirabravo@ginasticafacial.com.br</a></p>
   </form>
 
   <aside class="info">

@@ -223,3 +223,55 @@ a:hover { color: var(--brand-2); }
     border-radius: 8px; /* Arredondamento menor em telas pequenas */
   }
 }
+
+/* Layout do Formulário - Ajustado */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+    background: #fff;
+    padding: 25px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form label {
+    display: flex;
+    flex-direction: column; /* Força o texto ficar em cima do input */
+    gap: 5px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.form input, 
+.form textarea {
+    width: 100% !important; /* Garante que ocupe toda a largura disponível */
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.form .btn {
+    align-self: flex-start; /* Botão não estica no desktop */
+    margin-top: 10px;
+    padding: 12px 30px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+    .form .btn {
+        width: 100%; /* Botão estica no mobile para facilitar o toque */
+    }
+}
