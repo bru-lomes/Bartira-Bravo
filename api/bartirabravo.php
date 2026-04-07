@@ -94,7 +94,7 @@
             <img src="IMG/bartirax.jpg" alt="Bartira aos xx anos">
           </figure>
           <div class="evo-body">
-            <h3 class="evo-title">AOS XX ANOS</h3>
+            <h3 class="evo-title">AOS 43 ANOS</h3>
          </div>
         </article>
 

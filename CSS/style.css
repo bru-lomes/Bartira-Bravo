@@ -180,3 +180,46 @@ a:hover { color: var(--brand-2); }
   .bartira-linha { flex-direction: column; align-items: center; text-align: center; }
   .bartira-foto { flex: none; margin-bottom: 20px; }
 }
+
+/* Ajuste do contêiner do mapa */
+.mapa-box {
+  width: 100%; /* Ocupa toda a largura do elemento pai (wrap) */
+  max-width: 100%; /* Impede que passe da tela */
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden; /* Corta qualquer coisa que tente sair */
+  background: #f4f4f4;
+  display: flex;
+}
+
+.mapa-placeholder {
+  width: 100%;
+}
+
+.mapa-placeholder a {
+  display: block;
+  width: 100%;
+}
+
+.mapa-placeholder img {
+  width: 100%; /* Força a imagem a ter a largura do contêiner */
+  height: auto; /* Mantém a proporção sem achatar */
+  display: block; /* Remove espaços vazios embaixo da imagem */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom suave ao passar o mouse (opcional) */
+.mapa-placeholder img:hover {
+  transform: scale(1.02);
+}
+
+/* Ajuste específico para mobile */
+@media (max-width: 768px) {
+  .mapa.wrap {
+    padding: 0 10px; /* Adiciona um respiro nas laterais no mobile */
+  }
+  
+  .mapa-box {
+    border-radius: 8px; /* Arredondamento menor em telas pequenas */
+  }
+}

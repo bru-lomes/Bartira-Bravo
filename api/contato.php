@@ -46,12 +46,10 @@
   <h2>Endereço</h2>
   <p>Rua Senhor do Monte, 495, São Paulo, SP, Brazil</p>
 
-  <!-- espaço reservado para mapa/iframe -->
   <div class="mapa-box" aria-label="Mapa">
-    <!-- substitua por um iframe do Google Maps quando quiser -->
     <div class="mapa-placeholder">
-      <a href="https://maps.app.goo.gl/bwQMhNPtgEb88zoi6">
-        <img src="IMG/maps.png" alt="Imagem da localização no Mapa (By Google Maps)" loading="lazy">
+      <a href="https://www.google.com/maps/search/?api=1&query=Rua+Senhor+do+Monte,+495,+São+Paulo,+SP" target="_blank">
+        <img src="IMG/maps.png" alt="Localização no Google Maps" loading="lazy">
       </a>
     </div>
   </div>

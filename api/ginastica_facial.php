@@ -164,7 +164,7 @@
 
 <section class="pacotes">
   <div class="wrap">
-    <h2 class="titulo">Pacote com 6 consultas</h2>
+    <h2 class="titulo">Plano com 6 consultas</h2>
     <ul class="checks">
       <li>Atendimentos semanais, quinzenais ou mensais</li>
       <li>Materiais e orientações para prática em casa</li>
